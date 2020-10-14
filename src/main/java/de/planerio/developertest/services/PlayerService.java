@@ -54,6 +54,10 @@ public class PlayerService {
 		return it;
 	}
 
+	//creates a player validating some project definitions
+	//position cannot be different from constant defined
+	//shirt number must be a value between 1 and 99 and
+	//there cannot be more than one player with the same shit number in the team
 	public Player createPlayer(PlayerRepository pRepo, Player p) {
 		if (p.getPosition() != null && positions.contains(p.getPosition()) //validate position
 				&& p.getShirtNumber() >= 1 && p.getShirtNumber() <= 99) {  //validate shirt number
